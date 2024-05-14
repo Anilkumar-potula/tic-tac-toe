@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: auto;
+    display: flex;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    width: 1;
+    justify-content: center;
+    align-items: center;
+    max-height: 100vh;
+    text-align: center; 
+    margin-top: 5%;
+    margin-bottom: 5%;
+    
+    }
+
+
+  .container {
+    display: block;    
+    text-align: center; /*To center the board horizontally */
+    align-items: center;
+       
+            
+  }
+
+  #central-container{
+    display: block;    
+    text-align: center; 
+    border: 4px solid orange;
+    padding-bottom: 5%;
+    font-weight: bold;
+    align-items: center;
+    min-width: 300px;
+    padding: 2%;
+  }
+
+ 
+
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px; /*Adjusted grid-gap to 0*/
+    max-width: 300px;
+    max-height: 100vh;
+    margin: 0 auto;
+    padding: 20px;
+        
+  }
+
+  .cell {
+    width: 100%;
+    height: 100px; /* Adjust height as needed */
+    background-color: lightgray; /* Light gray background color */
+    border: 2px solid lightgray;
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+    
+  .popup {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #f2f2f2;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .popup.active{
+
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    transition: 1s ease;
+    transition-delay: .3s;
+
+  }
+
+  .popup.active .popup-content{
+    transform: scale(2);
+    transition: 1s ease;
+    transition-delay: 0.5s;
+    width: 20%;
+    border-radius: 6px;
+    outline: black;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    padding: 30px;
+    margin: auto;
+  }
+
+  .popup .popup-content{
+    transition: 1s ease;
+    transition-delay: .3s;
+    
+    transform: scale(1.5);
+    margin: auto;
+  
+    
+  }
+
+  .popup-content{
+    color: #333;
+    line-height: 1;
+    background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  }
+
+  #resetButton{
+    width: 50%;
+    height: 45px;
+    background-color: #6e78ff;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    color: #f0f0f0;
+    margin-top: 5%;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  
+
+
+
+
+
+  
